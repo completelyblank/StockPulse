@@ -33,16 +33,7 @@ A full-stack stock market simulation app where users can trade stocks, track por
 
 ## 📸 Screenshots
 
-### 📸 Screenshots
-
-| Login Page | Portfolio Page |
-|------------|----------------|
-| ![Login](https://github.com/user-attachments/assets/990519f9-d69a-4906-a8e2-78adffedb35e) | ![Portfolio](https://github.com/user-attachments/assets/950dbd93-589a-4078-96dd-b3131a372888) |
-
-| Candlestick Chart | Leaderboard |
-|-------------------|-------------|
-| ![Chart](https://github.com/user-attachments/assets/b1d571ba-8519-4981-9a42-7ab130162281) | ![Leaderboard](https://github.com/user-attachments/assets/b318f757-29a5-4f84-ad14-b97d8d06715c) |
-
+TBD
 
 ---
 
