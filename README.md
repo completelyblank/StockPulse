@@ -25,7 +25,7 @@ A full-stack stock market simulation app where users can trade stocks, track por
 | Frontend                      | Backend                           |
 |------------------------------|------------------------------------|
 | Angular 17 + TypeScript      | Spring Boot (Java)                |
-| TailwindCSS + Custom Styles  | REST APIs with PostgreSQL         |
+| CSS | REST APIs with PostgreSQL         |
 | CanvasJS for Stock Charts    | JPA + Hibernate ORM               |
 | NewsAPI.org (client-only)    | Authentication & Trade Handling  |
 
