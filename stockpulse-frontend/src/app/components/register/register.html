@@ -1,0 +1,47 @@
+<div class="register-container glass">
+  <h2 class="login-title">Register</h2>
+
+  <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="username"
+        required
+        placeholder="Enter your username"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+        placeholder="Enter your password"
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" class="submit-btn" [disabled]="registerForm.invalid">
+      Register
+    </button>
+  </form>
+
+  <p class="footer-note">
+    Already have an account?
+    <a routerLink="/login">Login here</a>
+  </p>
+
+  <!-- Toast Notification -->
+  <app-toast-notification
+    *ngIf="toastVisible"
+    [message]="toastMessage"
+    [type]="toastType">
+  </app-toast-notification>
+</div>

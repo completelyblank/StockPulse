@@ -1,0 +1,13 @@
+<div class="news-container glass">
+  <h2>Market News</h2>
+
+  <div *ngIf="loading">Loading news...</div>
+  <div *ngIf="error">{{ error }}</div>
+
+  <div *ngFor="let article of articles" class="news-card">
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.description }}</p>
+    <a [href]="article.url" target="_blank">Read more →</a>
+    <small>{{ article.publishedAt | date:'short' }}</small>
+  </div>
+</div>

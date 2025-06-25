@@ -1,0 +1,42 @@
+<div class="profile-container glass" *ngIf="user">
+  <h2>👤 {{ user.username }}'s Profile</h2>
+
+  <ul class="profile-details">
+    <li><strong>Balance:</strong> ${{ user.balance.toFixed(2) }}</li>
+    <li><strong>Salary:</strong> ${{ user.salaryAmount || 'N/A' }}</li>
+
+    <li>
+      <strong>Holdings: </strong>
+      <button class="toggle-btn" (click)="showHoldings = !showHoldings">
+        {{ showHoldings ? 'Hide' : 'Show' }} Holdings
+      </button>
+      <ul *ngIf="showHoldings && portfolio?.holdings?.length! > 0; else noHoldings">
+<li *ngFor="let stock of portfolio.holdings">
+          {{ stock.symbol }} - {{ stock.quantity }} shares &#64; ${{ stock.avgBuyPrice.toFixed(2) }} 
+          (Current: ${{ stock.currentPrice.toFixed(2) }})
+          <span [style.color]="stock.gainLoss >= 0 ? 'limegreen' : 'red'">
+            [{{ stock.gainLoss >= 0 ? '+' : '' }}{{ stock.gainLoss.toFixed(2) }}]
+          </span>
+        </li>
+        <li class="total-value">
+          <strong>Total Value:</strong> ${{ portfolio.totalValue.toFixed(2) }}
+        </li>
+      </ul>
+      <ng-template #noHoldings><li>No holdings available.</li></ng-template>
+    </li>
+
+    <li>
+      <strong>Transactions: </strong>
+      <button class="toggle-btn" (click)="showTransactions = !showTransactions">
+        {{ showTransactions ? 'Hide' : 'Show' }} Transactions
+      </button>
+      <ul *ngIf="showTransactions && transactions?.length! > 0; else noTransactions">
+  <li *ngFor="let t of transactions">
+          {{ t.type }} {{ t.quantity }}x {{ t.stockSymbol }} &#64; ${{ t.price }} 
+          on {{ t.timestamp | date: 'short' }}
+        </li>
+      </ul>
+      <ng-template #noTransactions><li>No transactions found.</li></ng-template>
+    </li>
+  </ul>
+</div>

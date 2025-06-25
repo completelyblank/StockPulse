@@ -1,0 +1,27 @@
+<div class="dividends-container glass">
+  <h2>💸 Recent Dividends</h2>
+  <table class="dividends-table">
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Cash</th>
+        <th>Ex-Date</th>
+        <th>Record Date</th>
+        <th>Pay Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of dividends">
+        <td>{{ d.ticker }}</td>
+        <td>${{ d.cash_amount }}</td>
+        <td>{{ d.ex_dividend_date }}</td>
+        <td>{{ d.record_date }}</td>
+        <td>{{ d.pay_date }}</td>
+        <td><button (click)="loadCandlestick(d.ticker)">View Chart</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="chartContainer" style="margin-top: 30px; height: 400px; width: 100%;"></div>
+</div>

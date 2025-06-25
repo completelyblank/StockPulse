@@ -1,0 +1,31 @@
+.news-container {
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  color: #e0f7fa;
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
+}
+
+.news-card {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-left: 4px solid #8c92ac;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(140, 0, 255, 0.1);
+}
+
+.news-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.news-card a {
+  color: #8c92ac;
+  text-decoration: underline;
+}
+
+.news-card a:hover {
+  color: #d7deff;
+}

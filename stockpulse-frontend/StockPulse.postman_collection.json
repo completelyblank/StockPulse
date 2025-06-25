@@ -1,0 +1,124 @@
+{
+  "info": {
+    "name": "StockPulse",
+    "_postman_id": "1c2b1234-a3de-4e09-9371-334fefb21ee9",
+    "description": "API test suite for the StockPulse full-stack stock market simulation app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"test123\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/users/register",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "users", "register"]
+        }
+      }
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"test123\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/users/login",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "users", "login"]
+        }
+      }
+    },
+    {
+      "name": "Get User Profile",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/users/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "users", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get Portfolio",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/portfolio/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "portfolio", "1"]
+        }
+      }
+    },
+    {
+      "name": "Buy Stock",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"symbol\": \"AAPL\",\n  \"quantity\": 2\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/trade/buy",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "trade", "buy"]
+        }
+      }
+    },
+    {
+      "name": "Sell Stock",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"symbol\": \"AAPL\",\n  \"quantity\": 1\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/trade/sell",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "trade", "sell"]
+        }
+      }
+    },
+    {
+      "name": "Get Transactions",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/transactions/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "transactions", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get Leaderboard",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/leaderboard/leaderboard",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "leaderboard", "leaderboard"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8081"
+    }
+  ]
+}

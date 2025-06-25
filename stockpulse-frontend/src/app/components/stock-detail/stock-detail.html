@@ -1,0 +1,21 @@
+<div class="stock-detail-container glassy">
+  <div class="stock-header">
+    <h2>{{ symbol }} - {{ stockName }}</h2>
+    <p class="price">Price: ${{ latestPrice }}</p>
+  </div>
+
+  <div class="trade-form">
+    <input type="number" [(ngModel)]="quantity" min="1" placeholder="Quantity" />
+    <button (click)="buyStock()">Buy</button>
+    <button (click)="sellStock()">Sell</button>
+  </div>
+
+  <div id="chartContainer" class="chart-container"></div>
+
+  <!-- Toast Notification -->
+  <app-toast-notification
+    *ngIf="toastVisible"
+    [message]="toastMessage"
+    [type]="toastType">
+  </app-toast-notification>
+</div>

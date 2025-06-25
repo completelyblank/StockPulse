@@ -1,0 +1,112 @@
+.stocks-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #8c92ac;
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(0, 255, 255, 0.25);
+  color: #e0f7fa;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional glass wrapper */
+.stocks-container-glass {
+  background: rgba(13, 13, 13, 0.85);
+  border: 1px solid #8c92ac;
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(0, 255, 255, 0.15);
+  padding: 1rem;
+  backdrop-filter: blur(14px);
+}
+
+/* Table aesthetic */
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.stock-table th,
+.stock-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #555;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #e0f7fa;
+}
+
+.stock-table th {
+  color: #8c92ac;
+  text-shadow: 0 0 10px rgba(140, 255, 255, 0.3);
+}
+
+/* Trade input + buttons inline */
+.inline-trade {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 40px;
+}
+
+input{
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 0 4px #8c92ac;
+  transition: background-color 0.3s ease;
+}
+
+input:focus{
+   background-color: rgba(174, 0, 255, 0.1);
+}
+
+.inline-trade button,
+.inline-trade input {
+  height: 30px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+/* Inputs */
+.trade-form input {
+  padding: 0.6rem;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #8c92ac;
+  background: #1a1a1a;
+  color: #fff;
+  transition: border 0.3s;
+}
+
+.trade-form input:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+}
+
+/* Buttons */
+button {
+  margin: 0 0.25rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8c92ac, #474a56);
+  color: #000;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 255, 255, 0.3);
+}

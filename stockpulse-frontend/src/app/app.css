@@ -1,0 +1,185 @@
+/*app.css*/
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.background-overlay {
+  background: url('https://static.vecteezy.com/system/resources/previews/018/776/516/non_2x/abstract-purple-glowing-energy-waves-from-particles-and-magic-dots-with-blur-effect-on-dark-background-abstract-background-free-photo.jpg') no-repeat center center fixed;
+  padding: 0%;
+  
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  min-height: 100wh;
+  min-width: 100wh;
+  display: flex;
+  flex-direction: column;
+}
+
+.glass {
+  background: rgba(16, 13, 13, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 153, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.logo-container img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-left: 8px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  margin: 1.5rem;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #cfd6f2;
+  text-shadow: 0 0 10px #32343e;
+  margin: 0;
+}
+
+.tagline {
+padding-top: 10%;
+  font-size: 0.9rem;
+  color: #cbd4fa;
+  font-weight: 300;
+}
+
+.ticker-wrapper {
+  flex: 1;
+  overflow: hidden;
+  margin: 0 2rem;
+}
+
+.ticker {
+  display: flex;
+  animation: ticker 20s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-item {
+  margin-right: 2rem;
+  font-size: 0.95rem;
+  color: #c5cbe2;
+  font-weight: 500;
+}
+
+.ticker-item::before {
+  content: '•';
+  margin-right: 0.5rem;
+  color: #d4dcff;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  color: #e6e6e6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: #8c92ac;
+  color: #363842;
+  transform: translateY(-1px);
+}
+
+.nav-links a.active {
+  background: #e8ecfe;
+  border-bottom: 3px solid #8c92ac;
+  color: #585c6c;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.2rem;
+  margin: 1.5rem;
+  font-size: 0.95rem;
+  color: #fffbfb;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #c8d1fc;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0%;
+  }
+
+  .ticker-wrapper {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links a {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 0%;
+  }
+}

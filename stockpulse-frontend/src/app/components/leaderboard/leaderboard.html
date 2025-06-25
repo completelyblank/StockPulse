@@ -1,0 +1,23 @@
+<div class="leaderboard-container glass">
+  <h2>Leaderboard</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>User</th>
+        <th>Total Value</th>
+        <th>Gain/Loss</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of leaderboard; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.username }}</td>
+        <td>${{ user.totalValue.toFixed(2) }}</td>
+        <td [style.color]="user.gainLoss >= 0 ? 'limegreen' : 'red'">
+          {{ user.gainLoss >= 0 ? '+' : '' }}{{ user.gainLoss.toFixed(2) }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

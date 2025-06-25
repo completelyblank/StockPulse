@@ -1,0 +1,155 @@
+.stock-detail-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 24px rgba(0, 255, 255, 0.15);
+  color: #e0f7fa;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #8c92ac;
+}
+
+/* Header styling */
+.stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #8c92ac55;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  color: #8c92ac;
+}
+
+.stock-header h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #8c92ac;
+  text-shadow: 0 0 10px rgba(230, 252, 255, 0.4);
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8c92ac;
+  text-shadow: 0 0 8px rgba(0, 255, 200, 0.3);
+}
+
+/* Chart container */
+#chartContainer {
+  height: 400px;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+}
+h2{
+  color: #d2daff;
+}
+p{
+  color: rgb(52, 255, 52);
+}
+input{
+    
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 0 4px #8c92ac;
+  transition: background-color 0.3s ease;
+}
+button {
+  margin: 0 0.25rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8c92ac, #474a56);
+  color: #000;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 255, 255, 0.3);
+}
+
+/* Trade form styling */
+.trade-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.trade-form input[type="number"] {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #8c92ac;
+  background: #1a1a1a;
+  color: #fff;
+  width: 100px;
+  text-align: center;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+.trade-form input:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+}
+
+/* Buttons */
+.trade-form button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trade-form button:first-of-type {
+  background: linear-gradient(90deg, #00ffcc, #008866);
+  color: #000;
+}
+
+.trade-form button:last-of-type {
+  background: linear-gradient(90deg, #ff6666, #aa0000);
+  color: #fff;
+}
+
+.trade-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .stock-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trade-form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trade-form input,
+  .trade-form button {
+    width: 100%;
+  }
+}

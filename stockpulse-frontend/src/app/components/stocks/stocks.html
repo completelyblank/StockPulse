@@ -1,0 +1,28 @@
+<div class="stocks-container glass">
+    <h2>Available Stocks</h2>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search by symbol..." />
+    <table class="stock-table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>Price</th>
+                <th>Trade</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let stock of filteredStocks">
+
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.name }}</td>
+                <td>${{ stock.price }}</td>
+                <td>
+  <button (click)="navigateToStock(stock.symbol)">View</button>
+
+</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
